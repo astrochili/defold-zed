@@ -1,0 +1,7 @@
+/.internal
+/build
+/bundle
+.DS_Store
+Thumbs.db
+builtins
+log.txt

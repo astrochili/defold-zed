@@ -18,13 +18,15 @@ Zed by default uses a 4 space indent for Lua. To fix this, add the following to 
 
 ## Lua Language Server
 
-Zed already includes [Lua Language Server](https://github.com/LuaLS/lua-language-server) and all we have to do is setup the [`.luarc.json`](.luarc.json) file. I don't know how to share it between projects yet.
+Zed already includes [Lua Language Server](https://github.com/LuaLS/lua-language-server) and all we have to do is setup the [`.luarc.json`](.luarc.json) file.
+
+It would be better to share it between projects somewhere, but don't know how to do it yet.
 
 ## Defold API
 
 As usual it's local folder [`.defold`](.defold) included generated headers with [defold-api-emmylua](https://github.com/d954mas/defold-api-emmylua).
 
-Would be good idea to place it to some shared space and add path to it in `.luarc.json` to reuse between projects.
+It would be a good idea to place it to some shared place and set path in the `.luarc.json` file to reuse the api folder between projects.
 
 ## File Associations
 
@@ -45,5 +47,8 @@ Meanwhile, specifying a language type each time you open a file is possible, but
 
 There's no way to do it yet. Upvote 👍 and watch for updates https://github.com/zed-industries/community/issues/811.
 
-
 The only thing there is is a terminal from which you can run any commands.
+
+### Debug in Terminal
+
+There is a minimalistic cli [debugger.lua](https://github.com/slembcke/debugger.lua). I havn't tested it with Defold yet, because it requires to run `bob.jar` from Zed terminal and etc., but it works fine with pure Lua. It may help if the need for debugging is modest and infrequent and you would like to do it inside Zed environment.

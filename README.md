@@ -51,4 +51,9 @@ The only thing there is is a terminal from which you can run any commands.
 
 ### Debug in Terminal
 
-There is a minimalistic cli [debugger.lua](https://github.com/slembcke/debugger.lua). I havn't tested it with Defold yet, because it requires to run `bob.jar` from Zed terminal and etc., but it works fine with pure Lua. It may help if the need for debugging is modest and infrequent and you would like to do it inside Zed environment.
+There is a minimalistic cli [debugger.lua](https://github.com/slembcke/debugger.lua). It may help if the need for debugging is modest and infrequent and you would like to do it inside Zed environment.
+
+- Tested with pure Lua — PERFECT.
+- Tested with Defold — OKAY, but requires:
+  - Few edits to avoid calling the `require` function inside `debugger.lua`
+  - Running `bob.jar` and `dmengine` from Zed terminal as it happens in [defold-vscode-guide](https://github.com/astrochili/defold-vscode-guide/blob/master/.vscode/defold.sh).

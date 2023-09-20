@@ -7,17 +7,11 @@
   },
   "telemetry.enable": false,
   "workspace.ignoreSubmodules": false,
-  "workspace.ignoreDir": [
-    ".internal",
-    ".defold"
-  ],
   "workspace.library": [
-    ".internal",
-    ".defold"
+    "defold_api"
   ],
   "diagnostics.disable": [
     "lowercase-global",
-    "missing-parameter",
     "redefined-local"
   ]
 }

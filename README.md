@@ -24,9 +24,9 @@ It would be better to share it between projects somewhere, but don't know how to
 
 ## Defold API
 
-As usual it's local folder [`.defold`](.defold) included generated headers with [defold-api-emmylua](https://github.com/d954mas/defold-api-emmylua).
+Defold API annotations can be downloaded from [here](https://github.com/astrochili/defold-annotations/releases).
 
-It would be a good idea to place it to some shared place and set path in the `.luarc.json` file to reuse the api folder between projects.
+It would be a good idea to place them to some shared place and add the path to `workspace.library` array in the `.luarc.json` file. It allows to reuse the annotations folder between projects.
 
 ## File Associations
 
@@ -56,4 +56,4 @@ There is a minimalistic cli [debugger.lua](https://github.com/slembcke/debugger.
 - Tested with pure Lua — PERFECT.
 - Tested with Defold — OKAY, but requires:
   - Few edits to avoid calling the `require` function inside `debugger.lua`
-  - Running `bob.jar` and `dmengine` from Zed terminal as it happens in [defold-vscode-guide](https://github.com/astrochili/defold-vscode-guide/blob/master/.vscode/defold.sh).
+  - Running `bob.jar` and `dmengine` from Zed terminal as it happens in [defold-vscode-guide](https://github.com/astrochili/vscode-defold/blob/4b0408306b3bdc759b7c28f12c5f79a54eb2c1a0/.vscode/defold.sh#L364-L367).

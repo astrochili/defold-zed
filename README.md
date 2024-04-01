@@ -16,6 +16,14 @@ Zed by default uses a 4 space indent for Lua. To fix this, add the following to 
 }
 ```
 
+Also add Lua file associations:
+
+```json
+"file_types": {
+  "Lua": ["script", "render_script", "gui_script", "editor_script"]
+}
+```
+
 ## Lua Language Server
 
 Zed already includes [Lua Language Server](https://github.com/LuaLS/lua-language-server) and all we have to do is setup the [`.luarc.json`](.luarc.json) file.
@@ -27,21 +35,6 @@ It would be better to share it between projects somewhere, but don't know how to
 Defold API annotations can be downloaded from [here](https://github.com/astrochili/defold-annotations/releases).
 
 It would be a good idea to place them to some shared place and add the path to `workspace.library` array in the `.luarc.json` file. It allows to reuse the annotations folder between projects.
-
-## File Associations
-
-Files with the extension `*.script` and other types provided by Defold are not recognized as Lua in the Zed editor.
-
-I think it will be supported very soon, upvote 👍 and watch for updates https://github.com/zed-industries/community/issues/595.
-
-### Workaround
-
-Meanwhile, specifying a language type each time you open a file is possible, but it does not start the Language Server. Nevertheless, when you really need it, there is a hack how to start and language server, but only for one file:
-
-- Restart the editor
-- Open the desired file without touching any other Lua files.
-- Select language type `Lua` (I added the `"cmd-shift-l": "language_selector::Toggle"` shortcut for this)
-- At this point, the Lua Language Server starting to check updates, after which it's enabled for the unknown file type as well.
 
 ## Build and Debug
 

@@ -38,15 +38,28 @@ It would be a good idea to place them to some shared place and add the path to `
 
 ## Build and Debug
 
-There's no way to do it yet. Upvote 👍 and watch for updates https://github.com/zed-industries/community/issues/811.
+There's no way to do it natively. Upvote and watch for updates [zed-industries/community/issues/811](https://github.com/zed-industries/community/issues/811).
 
-The only thing there is is a terminal from which you can run any commands.
+### Build
+
+But there is a terminal from which you can run any commands. So we can create a hypothetical shell script (_this is an example for macOS and Defold 1.7.0, more detailed is [here](https://github.com/astrochili/vscode-defold/blob/4b0408306b3bdc759b7c28f12c5f79a54eb2c1a0/.vscode/defold.sh)_):
+
+```sh
+"/Applications/Defold.app/Contents/Resources/packages/jdk-17.0.5+8/bin/java" -cp "/Applications/Defold.app/Contents/Resources/packages/defold-d0338d13ad7c5ccd2be3208788805ef5010bf00b.jar" "com.dynamo.bob.Bob" --variant debug --output build/defoldkit build
+cp -rf build/arm64-osx/dmengine build/defoldkit/dmengine
+chmod +x "build/defoldkit/dmengine"
+build/defoldkit/dmengine
+```
+
+And run it:
+
+```sh
+$ sh build.sh
+```
 
 ### Debug in Terminal
 
 There is a minimalistic cli [debugger.lua](https://github.com/slembcke/debugger.lua). It may help if the need for debugging is modest and infrequent and you would like to do it inside Zed environment.
 
 - Tested with pure Lua — PERFECT.
-- Tested with Defold — OKAY, but requires:
-  - Few edits to avoid calling the `require` function inside `debugger.lua`
-  - Running `bob.jar` and `dmengine` from Zed terminal as it happens in [defold-vscode-guide](https://github.com/astrochili/vscode-defold/blob/4b0408306b3bdc759b7c28f12c5f79a54eb2c1a0/.vscode/defold.sh#L364-L367).
+- Tested with Defold — OKAY, but requires few edits to avoid calling the `require` function inside `debugger.lua`.

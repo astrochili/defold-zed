@@ -1,17 +1,20 @@
 {
-  "completion.callSnippet": "Replace",
-  "completion.keywordSnippet": "Replace",
-  "completion.showWord": "Fallback",
   "runtime": {
     "version": "Lua 5.1"
   },
   "telemetry.enable": false,
+  "completion.callSnippet": "Replace",
+  "completion.keywordSnippet": "Replace",
+  "completion.showWord": "Fallback",
+  "completion.autoRequire": false,
   "workspace.ignoreSubmodules": false,
   "workspace.library": [
-    "defold_api"
+    "~/Library/Application Support/Code/User/globalStorage/astronachos.defold"
   ],
-  "diagnostics.disable": [
-    "lowercase-global",
-    "redefined-local"
-  ]
+  "diagnostics.libraryFiles": "Disable",
+  "diagnostics.disable": ["lowercase-global", "redefined-local"],
+  "diagnostics.globals": ["defos", "imgui"],
+  "format.defaultConfig": {
+    "max_line_length": "unset"
+  }
 }

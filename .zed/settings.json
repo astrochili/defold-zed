@@ -1,0 +1,10 @@
+{
+  "language_overrides": {
+    "Lua": {
+      "tab_size": 2
+    }
+  },
+  "file_types": {
+    "Lua": ["script", "render_script", "gui_script", "editor_script"]
+  }
+}

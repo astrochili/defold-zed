@@ -66,9 +66,20 @@ The easiest way to run the task is creating a keybinding `Cmd+R` in the general 
 
 ## Debug
 
-No way to do it natively. Upvote and watch for updates [zed-industries/community/issues/811](https://github.com/zed-industries/community/issues/811).
+No way to do it natively with Zed. Upvote and watch for updates [zed-industries/community/issues/811](https://github.com/zed-industries/community/issues/811).
 
-But there is a minimalistic cli [debugger.lua](https://github.com/slembcke/debugger.lua). It may help if the need for debugging is modest and infrequent and you would like to do it inside Zed environment.
+### debugger.lua
 
-- Tested with pure Lua — PERFECT.
-- Tested with Defold — OKAY, but requires few edits to avoid calling the `require` function inside `debugger.lua`.
+There is a minimalistic [debugger.lua](debugger.lua) that may help if the need for debugging is modest and infrequent and you would like to do it inside Zed environment. It required some edits to work with Defold, so this is an adapted version without using `ffi` and `require`.
+
+A simple example:
+
+```lua
+-- Require it globally
+dbg = require 'debugger'
+
+-- Call a breakpoint
+dbg()
+```
+
+To understand how to interact with it, check out the original repository [slembcke/debugger.lua](https://github.com/slembcke/debugger.lua).

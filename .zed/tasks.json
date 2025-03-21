@@ -1,9 +1,38 @@
 [
-    {
-      "label": "build",
-      "command": "sh build.sh",
-      "use_new_terminal": false,
-      "allow_concurrent_runs": false,
-      "reveal": "always"
-    }
-  ]
+  {
+    "label": "build",
+    "command": "sh build.sh build",
+    "use_new_terminal": false,
+    "show_command": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "on_success"
+  },
+  {
+    "label": "distclean",
+    "command": "sh build.sh distclean",
+    "use_new_terminal": false,
+    "show_command": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "on_success"
+  },
+  {
+    "label": "clean",
+    "command": "sh build.sh clean",
+    "use_new_terminal": false,
+    "show_command": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "on_success"
+  },
+  {
+    "label": "resolve",
+    "command": "sh build.sh resolve",
+    "use_new_terminal": false,
+    "show_command": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "on_success"
+  }
+]

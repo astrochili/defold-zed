@@ -44,12 +44,12 @@ Same story. At the moment I sync libraries API with [Defold Kit](https://github.
 
 ## Build
 
-The [`build.sh`](build.sh) file is an example how to build and run a game with Defold `1.8.1` on macOS. For other versions or platforms you need to adapt it.
+The [`build.sh`](build.sh) file is an example how to build and run a game with Defold `1.9.8` on macOS. For other versions or platforms you need to adapt it.
 
 > A more detailed reference of the shell script is [here](https://github.com/astrochili/vscode-defold/blob/4b0408306b3bdc759b7c28f12c5f79a54eb2c1a0/.vscode/defold.sh).
 
 
-There is a task `build` provided by [`.zed/tasks.json`](.zed/tasks.json) file.
+There are tasks `build`, `resolve`, `clean`, `distclean` provided by [`.zed/tasks.json`](.zed/tasks.json) file.
 
 The easiest way to run the task is creating a keybinding `Cmd+R` in the general `keymap.json` file:
 
